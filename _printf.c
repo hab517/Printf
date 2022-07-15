@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdarg.h>
+#include <stdio.h>
+
 /**
 * print_format - format controller
 * @format: the base string
