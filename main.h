@@ -5,10 +5,10 @@
 #include <unistd.h>
 
 /**
- * struct format - a struct of format
- * @l: format checker
- * @ptr:  a pointer function
- */
+* struct format - a struct of format
+* @l: format checker
+* @ptr:  a pointer function
+*/
 
 typedef struct format
 {
@@ -18,12 +18,12 @@ typedef struct format
 
 
 /**
- * struct sign - struct containing flags to "turn on"
- * when a flag specifier is passed to _printf()
- * @plus: flag fpr the '+' character
- * @space:flag for the ' 'character
- * @hash: flag for the '#' character
- */
+* struct sign - struct containing flags to "turn on"
+* when a flag specifier is passed to _printf()
+* @plus: flag fpr the '+' character
+* @space:flag for the ' 'character
+* @hash: flag for the '#' character
+*/
 
 typedef struct sign
 {

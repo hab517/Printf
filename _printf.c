@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_format - format controller
- * @format: the base string
- * @valist : hold the argument passed
- * Return: total size of the argument with the total size of the base string
- */
+* print_format - format controller
+* @format: the base string
+* @valist : hold the argument passed
+* Return: total size of the argument with the total size of the base string
+*/
 int print_format(const char *format, va_list valist)
 {
 	unsigned int count = 0;
@@ -20,22 +20,22 @@ int print_format(const char *format, va_list valist)
 			{
 				return (-1);
 			}
-		count += result;
-		continue;
+			count += result;
+			continue;
 		}
-	print_out(format[i]);
-	count++;
+		print_out(format[i]);
+		count++;
 	}
 	return (count);
 }
 
 /**
- * formatchecker - checks the format and print the character
- * @str: the base string
- * @valist: number of arguments passed
- * @j: address of %
- * Return: total number of printed charcter inside the argument
- */
+* formatchecker - checks the format and print the character
+* @str: the base string
+* @valist: number of arguments passed
+* @j: address of %
+* Return: total number of printed charcter inside the argument
+*/
 int formatchecker(const char *str, va_list valist, int *j)
 {
 	int i;
@@ -43,17 +43,17 @@ int formatchecker(const char *str, va_list valist, int *j)
 	int formats;
 
 	Data checker[] = {{'c', print_char},
-			  {'s', print_string},
-			  {'d', print_int},
-			  {'i', print_int},
-			  {'b', print_binary},
-			  {'u', print_unsigned},
-			  {'o', print_octal},
-			  {'x', print_hex},
-			  {'X', print_hex_big},
-			  {'S', print_bigS},
-			  {'p', print_address},
-			  {'R', print_rot13}};
+		{'s', print_string},
+		{'d', print_int},
+		{'i', print_int},
+		{'b', print_binary},
+		{'u', print_unsigned},
+		{'o', print_octal},
+		{'x', print_hex},
+		{'X', print_hex_big},
+		{'S', print_bigS},
+		{'p', print_address},
+		{'R', print_rot13}};
 	*j = *j + 1;
 	if (str[*j] == '\0')
 	{
@@ -78,10 +78,10 @@ int formatchecker(const char *str, va_list valist, int *j)
 }
 
 /**
- * _printf - prints anything
- * @format: list of argument type passed
- * Return: number of character printed
- */
+* _printf - prints anything
+* @format: list of argument type passed
+* Return: number of character printed
+*/
 int _printf(const char *format, ...)
 {
 	va_list ag;

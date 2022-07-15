@@ -1,2 +1,1 @@
-# Printf
-AlX c programming project on printf
+this is c programming project on printf
